@@ -1,0 +1,56 @@
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.completed {
+  color: red;
+  text-decoration: line-through;
+}
+
+.full-bleed {
+  box-shadow: 0 0 0 100vmax lightblue;
+  clip-path: inset(0 -100vmax);
+}
+
+header {
+  background: lightblue;
+  padding: 2rem 1rem;
+}
+
+header,
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_container {
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.toggle_btn {
+  display: none;
+}
+
+@media screen and (max-width: 620px) {
+  header,
+  .nav_container {
+    flex-direction: column;
+  }
+  .nav_container {
+    margin: 1.5rem 0 0 0;
+  }
+}
